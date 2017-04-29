@@ -4,6 +4,9 @@
 
 ## 环境配置(container.env)
 
+    MONGOHOST='localhost' // mongodb host
+    MONGOPORT='27017'     // mongodb port
+
 ## 部署
 
 **单独部署**:
