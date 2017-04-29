@@ -1,0 +1,5 @@
+**/*.pyc
+container.env
+venv/
+service/htmls/
+**/*__pycache__/

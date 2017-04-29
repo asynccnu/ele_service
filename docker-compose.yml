@@ -1,0 +1,7 @@
+ele_api:
+    build: .
+    env_file:
+        - container.env
+    command: gunicorn wsgi:app -k aiohttp.worker.GunicornWebWorker -b 0.0.0.0:8080 --log-level DEBUG
+    ports:
+        - "5577:8080"
