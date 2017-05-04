@@ -1,0 +1,5 @@
+ele_api_test:
+    build: .
+    env_file:
+        - container.test.env
+    command: python -m tests.__init__

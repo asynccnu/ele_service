@@ -17,7 +17,7 @@ async def ele_search_api(request):
     except json.decoder.JSONDecodeError:
         return Response(body = b'{"error": "post json data error"}',
             content_type = 'application/json', status = 500)
-    dor = json_data.get('do')
+    dor = json_data.get('dor')
     typeit = json_data.get('type')
     _dor = dor_dict.get(dor)
     if _dor is None:

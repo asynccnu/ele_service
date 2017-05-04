@@ -1,5 +1,6 @@
 **/*.pyc
 container.env
+container.test.env
 venv/
 service/htmls/
 **/*__pycache__/
