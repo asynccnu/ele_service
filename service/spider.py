@@ -124,7 +124,6 @@ async def get_old_ele(meter, dor, typeit):
                 }
             }
 
-
 async def get_new_ele(meter, dor, typeit):
     """
     -> 新电费接口爬虫
