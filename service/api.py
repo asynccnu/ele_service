@@ -1,3 +1,4 @@
+import json
 from aiohttp import web
 from aiohttp.web import Response
 from .spider import dor_spider, get_ele
@@ -11,8 +12,12 @@ async def ele_search_api(request):
     ele_dict = await dordb.dormitories.find_one()
     dor_dict = ele_dict['meter']
 
-    json_data = await request.json()
-    dor = json_data.get('dor')
+    try:
+        json_data = await request.json()
+    except json.decoder.JSONDecodeError:
+        return Response(body = b'{"error": "post json data error"}',
+            content_type = 'application/json', status = 500)
+    dor = json_data.get('do')
     typeit = json_data.get('type')
     _dor = dor_dict.get(dor)
     if _dor is None:
