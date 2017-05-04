@@ -32,7 +32,7 @@ async def ele_search_api(request):
     rv = await get_ele(meter, dor, typeit)
     if rv:
         return web.json_response(rv)
-    else: return Response(body = b'{}',
+    else: return Response(body = b'{"msg": "fuck ccnu"}',
         content_type = 'application/json', status = 500)
 
 @require_admin_login
