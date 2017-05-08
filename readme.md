@@ -16,6 +16,14 @@ $ docker-compose stop && docker-compose build && dockder-compose up -d &&
 docker-compose ps
 ```
 
+## 测试
+
++ 配置```container.test.env```
+
+```shell
+$./start_test.sh && docker-compose -f docker-compose.test.yml logs --tail="100" mana_api_test
+```
+
 ## Log
 
 + 2017年4月29日: 拖了2个月了...ㄟ( ▔, ▔ )ㄏ

@@ -3,3 +3,8 @@ ele_api_test:
     env_file:
         - container.test.env
     command: python -m tests.__init__
+    links:
+        - mongodb_test
+
+mongodb_test:
+    image: daocloud.io/mongo
