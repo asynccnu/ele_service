@@ -5,7 +5,7 @@ async-timeout==1.2.0
 beautifulsoup4==4.5.3
 cffi==1.10.0
 chardet==3.0.2
-cryptography
+cryptography==1.8.1
 docopt==0.6.2
 gunicorn==19.7.1
 html-parser==0.2
