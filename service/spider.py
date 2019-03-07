@@ -191,6 +191,8 @@ async def get_new_ele(meter, dor, typeit):
 async def get_ele(meter, dor, typeit):
     if meter == 0:
         return none_data % dor
+    return await get_new_ele(meter, dor, typeit)
+
     try:
         return await get_old_ele(meter, dor, typeit)
     except aiohttp.client_exceptions.ClientResponseError:
