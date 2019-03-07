@@ -132,7 +132,7 @@ async def get_new_ele(meter, dor, typeit):
     cookies = {'ammeterid': meter}
     async with aiohttp.ClientSession(cookie_jar=aiohttp.CookieJar(unsafe=True), \
         headers=headers, cookies=cookies) as session:
-        async with session.get(new_ele_url, timeout=5) as resp:
+        async with session.get(new_ele_url, timeout=12) as resp:
             html = await resp.text()
             soup = BeautifulSoup(html, 'lxml', from_encoding='utf-8')
 
