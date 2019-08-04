@@ -1,8 +1,8 @@
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
 
-MONGOHOST = os.getenv('MONGOHOST') or 'localhost'
-MONGOPORT = int(os.getenv('MONGOPORT') or '27017')
+MONGODB_HOST = os.getenv('MONGOHOST') or 'localhost'
+MONGODB_PORT = int(os.getenv('MONGOPORT') or '27017')
 MONGODB_USERNAME = os.getenv('MONGODB_USERNAME') or "muxi"
 MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD') or "nopassword"
 
