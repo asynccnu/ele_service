@@ -1,4 +1,4 @@
-aiohttp==2.0.7
+aiohttp==3.7.4
 aiohttp-session==0.8.0
 asn1crypto==0.22.0
 async-timeout==1.2.0
